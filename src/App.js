@@ -9,7 +9,6 @@ function App() {
 
   const [query, setQuery] = useState("");
   const [weather, setWeather] = useState({});
-  const [errorMessage, setErrorMessage] = useState("");
 
   const search = evt => {
     if (evt.key === "Enter") {
@@ -20,11 +19,6 @@ function App() {
           setWeather(result)
           console.log(result);
           setQuery("");
-          if (!result.ok) {
-            setErrorMessage("Please type valid city name")
-            console.log(errorMessage);
-            
-          }
         })
     }
   }
@@ -35,13 +29,7 @@ function App() {
         setWeather(result)
 
       })
-
-
   }
-
-
-
-
 
   const dateBuilder = (d) => {
     let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
@@ -67,7 +55,7 @@ function App() {
   }
 
   return (
-    <div className={(typeof weather.main != "undefined") ? theme()  : "app"}>
+    <div className={(typeof weather.main != "undefined") ? theme() : "app"}>
 
       <main>
         <div className="search-box">
