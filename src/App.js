@@ -7,7 +7,7 @@ const api = {
 }
 function App() {
 
-  const [query, setQuery] = useState("Berlin");
+  const [query, setQuery] = useState("");
   const [weather, setWeather] = useState({});
   const [errorMessage, setErrorMessage] = useState("");
 
@@ -20,11 +20,10 @@ function App() {
           setWeather(result)
           console.log(result);
           setQuery("");
-          if (result.cod === "404") {
+          if (!result.ok) {
             setErrorMessage("Please type valid city name")
             console.log(errorMessage);
-
-
+            
           }
         })
     }
@@ -55,9 +54,20 @@ function App() {
     return `${day} ${date} ${month} ${year}`
   }
 
+  function theme() {
+    if (weather.main.temp < 6) {
+      return "app winter"
+    }
+    if (weather.main.temp > 6 && weather.main.temp < 20) {
+      return "app spring"
+    }
+    if (weather.main.temp > 20) {
+      return "app summer"
+    }
+  }
 
   return (
-    <div className={(typeof weather.main != "undefined") ? ((weather.main.temp > 16) ? "app warm" : "app") : "app"}>
+    <div className={(typeof weather.main != "undefined") ? theme()  : "app"}>
 
       <main>
         <div className="search-box">

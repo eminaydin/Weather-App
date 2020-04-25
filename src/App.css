@@ -12,12 +12,15 @@ body {
   background-position: bottom;
   transition: 0.4s ease-out;
 }
-.app.warm {
-  background-image: url("https://images.unsplash.com/photo-1517384084767-6bc118943770?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80");
+.app.summer {
+  background-image: url("https://images.unsplash.com/photo-1501426026826-31c667bdf23d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=676&q=80");
+}
+.app.winter {
+  background-image: url("https://images.unsplash.com/photo-1512566393827-78dc4c8d8292?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=564&q=80");
 }
  main {
    min-height: 100vh;
-   background-image: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.75));
+   background-image: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0, 0, 0, 0.33));
    padding: 25px;
  }
  .search-box {
