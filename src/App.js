@@ -59,7 +59,7 @@ function App() {
       return "app winter"
     }
     if (weather.main.temp > 6 && weather.main.temp < 20) {
-      return "app spring"
+      return "app autumn"
     }
     if (weather.main.temp > 20) {
       return "app summer"
