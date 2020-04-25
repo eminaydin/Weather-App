@@ -1,38 +1,69 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: "montseratt", sans-serif;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app {
+  background-image: url("https://images.unsplash.com/photo-1519068261745-b3f8ecd6b8d9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=625&q=80");
+  background-size: cover;
+  background-position: bottom;
+  transition: 0.4s ease-out;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.app.warm {
+  background-image: url("https://images.unsplash.com/photo-1517384084767-6bc118943770?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80");
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+ main {
+   min-height: 100vh;
+   background-image: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.75));
+   padding: 25px;
+ }
+ .search-box {
+   width: 100%;
+   margin: 0 0 75px;
+ }
+ .search-box .search-bar{
+   display: block;
+   width: 100%;
+   padding: 15px;
+   appearance: none;
+   background: none;
+   outline: none;
+   background-color: rgba(255, 255, 255, 0.5);
+   border-radius: 0 0 16px 16px;
+   margin-top: -25px;
+   box-shadow: 0 px 5px rgba(0,0,0,0.2);
+   color: #313131;
+   font-size: 20px;
+   transition: 0.4s ease;
+ }
+ .search-box .search-bar:focus {
+   background-color: rgba(255, 255, 255, 0.75);
+ }
+ .location-box .location{
+   color: #FFF;
+   font-size: 32px;
+   font-weight: 500;
+   text-align: center;
+   text-shadow: 3px 3px rgba(50,50,70,0.5);
+ }
+ .location-box .date {
+   color: #FFF;
+   font-size: 20px;
+   font-weight: 300;
+   font-style: italic;
+   text-align: center;
+   text-shadow: 2px 2px rgba(50,50,70,0.5);
+ }
+ .weather-box {
+   text-align: center;
+ }
+ .weather-box .temp {
+   position: relative;
+   display: inline-block;
+   margin: 30px auto;
+   background-color:  rgba(255, 255, 255, 0.2);
+   border-radius: 16px;
+ }
